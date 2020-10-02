@@ -6,7 +6,7 @@ authors = ["Jochen Wersdörfer <jochen@wersdoerfer.de>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.9"
 django = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
