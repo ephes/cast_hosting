@@ -65,6 +65,20 @@
       become: true
       become_user: cast
 
+    - name: Find path to poetry venv interpreter
+      shell: find /home/cast/.cache/pypoetry/virtualenvs -name python | grep bin
+      register: find_python
+
+    - set_fact:
+        python_bin_path={{ find_python.stdout }}
+
+    - name: Run django migrations
+      shell: "{{ python_bin_path }} manage.py migrate"
+      args:
+        chdir: /home/cast/site
+      become: true
+      become_user: cast
+
     # Gunicorn
     - name: Create a symbolic link for gunicorn systemd service
       file:
