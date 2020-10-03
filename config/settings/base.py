@@ -26,7 +26,9 @@ BASE_DIR = ROOT_DIR
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc"
+SECRET_KEY = env.get(
+    "DJANGO_SECRET_KEY", default="r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
