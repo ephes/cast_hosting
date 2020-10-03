@@ -2,9 +2,6 @@
   tasks:
     - include_vars: secrets.yml
 
-    - name: Debug
-      debug: msg="hello world {{ cast_postgres_user }}"
-
     - name: Install required build packages
       apt:
         name: ["git"]
