@@ -1,0 +1,14 @@
+# Contents of /etc/systemd/system/multi-user.target.wants/cast.service
+[Unit]
+Description=Django-Cast Hosting Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/cast/site
+User=cast
+ExecStart=/home/cast/site/gunicorn.sh
+
+[Install]
+WantedBy=multi-user.target
