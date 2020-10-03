@@ -25,3 +25,6 @@ db.sqlite3
 
 # ansible vault password
 .vault_password
+
+# vim
+.*swp
