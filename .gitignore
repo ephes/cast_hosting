@@ -19,3 +19,6 @@ __pycache__/
 
 # development sqlite
 db.sqlite3
+
+# envirornment for django-environ
+.env
