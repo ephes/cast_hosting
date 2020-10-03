@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 import environ
+import dj_database_url
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = ROOT_DIR / "apps"
@@ -26,7 +27,7 @@ BASE_DIR = ROOT_DIR
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.get(
+SECRET_KEY = env(
     "DJANGO_SECRET_KEY", default="r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc"
 )
 
@@ -80,13 +81,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# https://github.com/jacobian/dj-database-url
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+DATABASES = {}
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
