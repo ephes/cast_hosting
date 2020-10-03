@@ -46,7 +46,7 @@
     - name: Make sure cast gunicorn service is running
       systemd:
         state: restarted
-        name: 
+        name: cast
 
     - name: Create a symbolic link for traefik loadbalancer
       file:
