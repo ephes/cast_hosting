@@ -1,0 +1,3 @@
+createdb cast
+createuser cast
+psql -d cast -c 'GRANT ALL PRIVILEGES ON DATABASE "cast" to "cast";'
