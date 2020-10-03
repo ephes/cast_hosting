@@ -13,11 +13,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 import environ
-import dj_database_url
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = ROOT_DIR / "apps"
 env = environ.Env()
+with (ROOT_DIR / ".env").open("r") as f:
+    environ.Env.read_env(env_file=f)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = ROOT_DIR
@@ -27,9 +28,7 @@ BASE_DIR = ROOT_DIR
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env(
-    "DJANGO_SECRET_KEY", default="r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc"
-)
+SECRET_KEY = env("DJANGO_SECRET_KEY", default="r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,8 +82,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # https://github.com/jacobian/dj-database-url
 
-DATABASES = {}
-DATABASES["default"] = dj_database_url.config(conn_max_age=600)
+DATABASES = {"default": env.db()}
 
 
 # Password validation
