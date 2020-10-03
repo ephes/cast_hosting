@@ -3,7 +3,7 @@
     - include_vars: secrets.yml
 
     - name: Debug
-      debug: msg="hello world {{ postgres_cast_user }}"
+      debug: msg="hello world {{ cast_postgres_user }}"
 
     - name: Install required build packages
       apt:
@@ -14,12 +14,21 @@
         name: cast
         shell: /bin/bash
 
-    - name: Create a new database with name cast
+    - name: Create a new postgres database with name "{{ cast_postgres_database }}"
       community.general.postgresql_db:
         name: "{{ cast_postgres_database }}"
-        login_user: "{{ cast_postgres_user }}"
-        login_password: "{{ cast_postgres_password }}"
         state: present
+      become: true
+      become_user: postgres
+
+    - name: Create a new postgres user with name "{{ cast_postgres_user }}"
+      community.general.postgresql_user:
+        db: "{{ cast_postgres_database }}"
+        name: "{{ cast_postgres_user }}"
+        password: "{{ cast_postgres_password }}"
+        state: present
+      become: true
+      become_user: postgres
 
     - name: Git checkout repository
       git:
