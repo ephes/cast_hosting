@@ -156,4 +156,5 @@ LOGIN_REDIRECT_URL = "users:redirect"
 LOGIN_URL = "account_login"
 
 # SITES
-SITE_ID = 1  # Django Admin wont work without this
+# but site id middleware does not work when SITE_ID is set :/
+# SITE_ID = 1  # Django Admin wont work without this
