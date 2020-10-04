@@ -32,7 +32,7 @@ APPS_DIR = ROOT_DIR / "apps"
 SECRET_KEY = env("DJANGO_SECRET_KEY", default="r6cvelf5dxd8#2iy48wb-5+t-jo*8p8+!8es*f_ns69zy_k^bc")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
