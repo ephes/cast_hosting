@@ -31,7 +31,14 @@ build-backend = "poetry.masonry.api"
 line-length = 120
 
 [tool.coverage.run]
-include = foobar/*
-omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
+include = "apps/*"
+omit = "*migrations*, *tests*"
+plugins = [
+    "django_coverage_plugin"
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+minversion = "6.0"
+addopts = "--reuse-db -p no:warnings"
+norecursedirs = ".git config"
