@@ -153,3 +153,6 @@ AUTH_USER_MODEL = "users.User"
 LOGIN_REDIRECT_URL = "users:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
+
+# SITES
+SITE_ID = 1  # Django Admin wont work without this
