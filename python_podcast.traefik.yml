@@ -1,0 +1,37 @@
+http:
+  routers:
+    web-router:
+      rule: "Host(`staging.python-podcast.de`) || Host(`www.staging.python-podcast.de`)"
+
+      entryPoints:
+        - web
+      middlewares:
+        - redirect
+        - csrf
+      service: django
+
+    web-secure-router:
+      rule: "Host(`staging.python-podcast.de`) || Host(`www.staging.python-podcast.de`)"
+
+      entryPoints:
+        - web-secure
+      middlewares:
+        - csrf
+      service: django
+      tls:
+        certResolver: letsencrypt
+
+  middlewares:
+    redirect:
+      redirectScheme:
+        scheme: https
+        permanent: true
+    csrf:
+      headers:
+        hostsProxyHeaders: ["X-CSRFToken"]
+
+  services:
+    django:
+      loadBalancer:
+        servers:
+          - url: http://localhost:8001

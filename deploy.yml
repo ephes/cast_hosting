@@ -88,8 +88,20 @@
         state: restarted
         name: cast
 
-    - name: Create a symbolic link for traefik loadbalancer
+    - name: Create a symbolic link for django_cast traefik loadbalancer
       file:
-        src: /home/cast/site/cast.traefik.yml
-        dest: /etc/traefik/dynamic/cast.traefik.yml
+        src: /home/cast/site/django_cast.traefik.yml
+        dest: /etc/traefik/dynamic/django_cast.traefik.yml
+        state: link
+
+    - name: Create a symbolic link for python-podcast traefik loadbalancer
+      file:
+        src: /home/cast/site/python_podcast.traefik.yml
+        dest: /etc/traefik/dynamic/python_podcast.traefik.yml
+        state: link
+  
+    - name: Create a symbolic link for wersdoerfer traefik loadbalancer
+      file:
+        src: /home/cast/site/wersdoerfer.traefik.yml
+        dest: /etc/traefik/dynamic/wersdoerfer.traefik.yml
         state: link
