@@ -1,7 +1,7 @@
 http:
   routers:
     web-router:
-      rule: "Host(`django-cast.com`) || Host(`www.django-cast.com`) || Host(`staging.wersdoerfer.de`) || Host(`staging.python-podcast.de`)"
+      rule: "Host(`django-cast.com`) || Host(`www.django-cast.com`) || Host(`staging.wersdoerfer.de`) || Host(`staging.python-podcast.de`)"
 
       entryPoints:
         - web
@@ -11,7 +11,7 @@ http:
       service: django
 
     web-secure-router:
-      rule: "Host(`django-cast.com`) || Host(`www.django-cast.com`) || Host(`staging.wersdoerfer.de`) || Host(`staging.python-podcast.de`)"
+      rule: "Host(`django-cast.com`) || Host(`www.django-cast.com`) || Host(`staging.wersdoerfer.de`) || Host(`staging.python-podcast.de`)"
 
       entryPoints:
         - web-secure
