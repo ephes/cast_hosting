@@ -22,6 +22,7 @@ with (ROOT_DIR / ".env").open("r") as f:
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = ROOT_DIR
+APPS_DIR = ROOT_DIR / "apps"
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,14 +39,29 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    "django.contrib.sites",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+THIRD_PARTY_APPS = [
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+]
+
+LOCAL_APPS = [
+    "apps.users.apps.UsersConfig",
+    # Your stuff: custom apps go here
+]
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -62,7 +78,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [APPS_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -108,13 +124,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -122,3 +134,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+
+# ADMIN
+# Django Admin URL.
+ADMIN_URL = "admin/"
+
+
+# AUTHENTICATION
+# https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+# https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
+AUTH_USER_MODEL = "users.User"
+# https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
+LOGIN_REDIRECT_URL = "users:redirect"
+# https://docs.djangoproject.com/en/dev/ref/settings/#login-url
+LOGIN_URL = "account_login"
