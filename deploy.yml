@@ -85,7 +85,7 @@
       become_user: cast
 
     - name: Run django collectstatic
-      shell: "{{ python_bin_path }} manage.py collectstatic"
+      shell: "{{ python_bin_path }} manage.py collectstatic --noinput"
       args:
         chdir: /home/cast/site
       become: true
