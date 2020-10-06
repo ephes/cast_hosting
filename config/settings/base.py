@@ -186,3 +186,7 @@ LOGIN_URL = "account_login"
 # SITES
 # but site id middleware does not work when SITE_ID is set :/
 # SITE_ID = 1  # Django Admin wont work without this
+
+# Comments
+COMMENTS_APP = "fluent_comments"
+FLUENT_COMMENTS_EXCLUDE_FIELDS = ("url", "title")
