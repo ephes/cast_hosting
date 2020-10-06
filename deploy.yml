@@ -6,6 +6,14 @@
       apt:
         name: ["git"]
 
+    - name: Packages required for Pillow
+      apt:
+        name: ["libpng-dev", "libjpeg-dev"]
+
+    - name: Packages required for django-fluentcomments
+      apt:
+        name: ["gettext"]
+
     - name: Add the user "cast" with a bash shell
       user:
         name: cast
