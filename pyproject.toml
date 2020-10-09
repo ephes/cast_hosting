@@ -49,3 +49,7 @@ DJANGO_SETTINGS_MODULE = "config.settings.test"
 minversion = "6.0"
 addopts = "--reuse-db -p no:warnings"
 norecursedirs = ".git config"
+
+[tool.isort]
+profile = "black"
+src_paths = ["apps", "config"]
