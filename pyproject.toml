@@ -54,3 +54,4 @@ norecursedirs = ".git config"
 [tool.isort]
 profile = "black"
 src_paths = ["apps", "config"]
+skip = ["migrations"]
