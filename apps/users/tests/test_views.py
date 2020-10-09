@@ -5,11 +5,7 @@ from django.test import RequestFactory
 
 from apps.users.models import User
 from apps.users.tests.factories import UserFactory
-from apps.users.views import (
-    UserRedirectView,
-    UserUpdateView,
-    user_detail_view,
-)
+from apps.users.views import UserRedirectView, UserUpdateView, user_detail_view
 
 pytestmark = pytest.mark.django_db
 
