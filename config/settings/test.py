@@ -1,5 +1,5 @@
 from .base import *  # noqa
-from .base import env
+from .base import env  # noqa
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#test-runner
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
