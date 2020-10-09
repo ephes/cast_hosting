@@ -2,3 +2,11 @@ ansible-galaxy collection install -r requirements.yml
 
 coverage run -m pytest
 coverage report -m
+
+flake8
+pytest
+isort .
+black .
+
+flake8 && pytest && isort . && black .
+flake8 && coverage run -m pytest && coverage report -m && isort . && black .
