@@ -231,7 +231,7 @@ wagtail_srcset = ">=0.1,<0.2"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "89eaea0e946dcd8221359b83af66dbd04a3f57b7"
+resolved_reference = "27a1022ee85f665f5c42443a50c13108a02634fd"
 
 [[package]]
 name = "django-ckeditor"
@@ -466,7 +466,7 @@ doc = ["sphinx", "sphinx-rtd-theme"]
 
 [[package]]
 name = "faker"
-version = "4.5.0"
+version = "4.9.0"
 description = "Faker is a Python package that generates fake data for you."
 category = "dev"
 optional = false
@@ -550,7 +550,7 @@ python-versions = "*"
 
 [[package]]
 name = "isort"
-version = "5.5.4"
+version = "5.6.1"
 description = "A Python utility / library to sort Python imports."
 category = "dev"
 optional = false
@@ -916,7 +916,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "sqlparse"
-version = "0.4.0"
+version = "0.4.1"
 description = "A non-validating SQL parser."
 category = "main"
 optional = false
@@ -1257,8 +1257,8 @@ factory-boy = [
     {file = "factory_boy-3.1.0.tar.gz", hash = "sha256:ded73e49135c24bd4d3f45bf1eb168f8d290090f5cf4566b8df3698317dc9c08"},
 ]
 faker = [
-    {file = "Faker-4.5.0-py3-none-any.whl", hash = "sha256:ba4f98ed8c4c3e817c39626e996a913e3b6478b02625e1cfe9feb7fd8f2f4883"},
-    {file = "Faker-4.5.0.tar.gz", hash = "sha256:c7c7dcede34e10bfdb8601bea807bf065ec3dd3e90884aabcfd4e3f7ae2dbe3b"},
+    {file = "Faker-4.9.0-py3-none-any.whl", hash = "sha256:934660336924f4453733baebc74ad9c9b237155a17781990808c00801e63d557"},
+    {file = "Faker-4.9.0.tar.gz", hash = "sha256:5ca203eb9adaf6a9d1517a4d4a35a4d587f373639ed31da82b0f2e31abc2397a"},
 ]
 feedparser = [
     {file = "feedparser-6.0.1-py2.py3-none-any.whl", hash = "sha256:c9b436334258e718e224c5ef8a78088557e0d0382506360f702de10667ffde32"},
@@ -1285,8 +1285,8 @@ iniconfig = [
     {file = "iniconfig-1.0.1.tar.gz", hash = "sha256:e5f92f89355a67de0595932a6c6c02ab4afddc6fcdc0bfc5becd0d60884d3f69"},
 ]
 isort = [
-    {file = "isort-5.5.4-py3-none-any.whl", hash = "sha256:36f0c6659b9000597e92618d05b72d4181104cf59472b1c6a039e3783f930c95"},
-    {file = "isort-5.5.4.tar.gz", hash = "sha256:ba040c24d20aa302f78f4747df549573ae1eaf8e1084269199154da9c483f07f"},
+    {file = "isort-5.6.1-py3-none-any.whl", hash = "sha256:dd3211f513f4a92ec1ec1876fc1dc3c686649c349d49523f5b5adbb0814e5960"},
+    {file = "isort-5.6.1.tar.gz", hash = "sha256:2f510f34ae18a8d0958c53eec51ef84fd099f07c4c639676525acbcd7b5bd3ff"},
 ]
 itypes = [
     {file = "itypes-1.2.0-py2.py3-none-any.whl", hash = "sha256:03da6872ca89d29aef62773672b2d408f490f80db48b23079a4b194c86dd04c6"},
@@ -1501,8 +1501,8 @@ soupsieve = [
     {file = "soupsieve-2.0.1.tar.gz", hash = "sha256:a59dc181727e95d25f781f0eb4fd1825ff45590ec8ff49eadfd7f1a537cc0232"},
 ]
 sqlparse = [
-    {file = "sqlparse-0.4.0-py3-none-any.whl", hash = "sha256:0523026398aea9c8b5f7a4a6d5c0829c285b4fbd960c17b5967a369342e21e01"},
-    {file = "sqlparse-0.4.0.tar.gz", hash = "sha256:d59e473424ae7470778fa4dd0dd7bb666ff324f0a6106c29deb5946ea5367f04"},
+    {file = "sqlparse-0.4.1-py3-none-any.whl", hash = "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0"},
+    {file = "sqlparse-0.4.1.tar.gz", hash = "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"},
 ]
 tablib = [
     {file = "tablib-2.0.0-py3-none-any.whl", hash = "sha256:c5a77c96ad306d5b380def1309d521ad5e98b4f83726f84857ad87e142d13279"},
