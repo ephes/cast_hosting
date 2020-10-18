@@ -98,6 +98,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.sites.middleware.CurrentSiteMiddleware",
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -165,6 +166,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
+# Media Root
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
+
+
 # ADMIN
 # Django Admin URL.
 ADMIN_URL = "admin/"
@@ -183,10 +189,16 @@ LOGIN_REDIRECT_URL = "users:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
 
+
 # SITES
 # but site id middleware does not work when SITE_ID is set :/
 # SITE_ID = 1  # Django Admin wont work without this
 
+
 # Comments
 COMMENTS_APP = "fluent_comments"
 FLUENT_COMMENTS_EXCLUDE_FIELDS = ("url", "title")
+
+
+# Wagtail
+WAGTAIL_SITE_NAME = "Cast Hosting"
