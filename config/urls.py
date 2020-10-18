@@ -21,5 +21,5 @@ urlpatterns = [
     # Wagtail
     path("cms/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
-    path("pages/", include(wagtail_urls)),
+    re_path(r"", include(wagtail_urls)),  # default is wagtail
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
