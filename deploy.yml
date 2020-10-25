@@ -51,7 +51,7 @@
       become_user: cast
 
     - name: Install poetry
-      shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | /usr/local/bin/python3.9
+      shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | /usr/local/bin/python3.9 -
       args:
         warn: no
       become: true
@@ -76,6 +76,13 @@
 
     - set_fact:
         python_bin_path={{ find_python.stdout }}
+
+    - name: Upgrade pip
+      shell: "{{ python_bin_path }} -m pip install --upgrade pip"
+      args:
+        chdir: /home/cast/site
+      become: true
+      become_user: cast
 
     - name: Run django migrations
       shell: "{{ python_bin_path }} manage.py migrate"
