@@ -43,7 +43,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 name = "beautifulsoup4"
 version = "4.8.2"
 description = "Screen-scraping library"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -112,7 +112,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "coreapi"
 version = "2.3.3"
 description = "Python client library for Core API."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -126,7 +126,7 @@ uritemplate = "*"
 name = "coreschema"
 version = "0.0.4"
 description = "Core Schema."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -190,7 +190,7 @@ requests-oauthlib = ">=0.3.0"
 name = "django-appconf"
 version = "1.0.4"
 description = "A helper class for handling configuration defaults of packaged apps gracefully."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -199,9 +199,9 @@ django = "*"
 
 [[package]]
 name = "django-cast"
-version = "0.1.29"
+version = "0.1.34"
 description = "Just another blogging / podcasting package"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "^3.9"
 develop = false
@@ -214,7 +214,6 @@ django-ckeditor = "^6"
 django-environ = "^0.4.5"
 django-filepond = "^0.1.2"
 django-filter = "^2.2.0"
-django-fluent-comments = "branch master"
 django-imagekit = "^4.0.2"
 django-model-utils = "^4.0.0"
 django-threadedcomments = "^1.2"
@@ -232,13 +231,13 @@ wagtail_srcset = "^0.1"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "b2f3db4f2b43d955528dde97b29c274c490371da"
+resolved_reference = "9fea455ddfb1d861ff0764c98052f635c35d3256"
 
 [[package]]
 name = "django-ckeditor"
 version = "6.0.0"
 description = "Django admin CKEditor integration."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -297,7 +296,7 @@ python-versions = ">=3.5"
 name = "django-filepond"
 version = "0.1.2"
 description = "Django support for the fjavascript file upload library filepond"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -305,7 +304,7 @@ python-versions = "*"
 name = "django-filter"
 version = "2.4.0"
 description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -340,7 +339,7 @@ resolved_reference = "109b9896cdc1c32b149a27e7ed254aef09c1b07e"
 name = "django-imagekit"
 version = "4.0.2"
 description = "Automated image processing for Django models."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -357,7 +356,7 @@ async_rq = ["django-rq (>=0.6.0)"]
 name = "django-js-asset"
 version = "1.2.2"
 description = "script tag with additional attributes for django.forms.Media"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -365,7 +364,7 @@ python-versions = "*"
 name = "django-model-utils"
 version = "4.0.0"
 description = "Django model mixins and utilities"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -376,7 +375,7 @@ Django = ">=2.0.1"
 name = "django-modelcluster"
 version = "5.1"
 description = "Django extension to allow working with 'clusters' of models as a single unit, independently of the database"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -398,7 +397,7 @@ python-versions = "*"
 name = "django-taggit"
 version = "1.3.0"
 description = "django-taggit is a reusable Django application for simple tagging."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -409,7 +408,7 @@ Django = ">=1.11"
 name = "django-threadedcomments"
 version = "1.2"
 description = "A simple yet flexible threaded commenting system."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -420,7 +419,7 @@ django-contrib-comments = ">=1.7.3"
 name = "django-treebeard"
 version = "4.3.1"
 description = "Efficient tree implementations for Django"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -431,7 +430,7 @@ Django = ">=1.8"
 name = "django-watson"
 version = "1.5.5"
 description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -439,7 +438,7 @@ python-versions = "*"
 name = "djangorestframework"
 version = "3.12.1"
 description = "Web APIs for Django, made easy."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -450,7 +449,7 @@ django = ">=2.2"
 name = "draftjs-exporter"
 version = "2.1.7"
 description = "Library to convert rich text from Draft.js raw ContentState to HTML"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -463,7 +462,7 @@ testing = ["tox (>=2.3.1)", "markov_draftjs (==0.1.1)", "memory-profiler (==0.47
 name = "et-xmlfile"
 version = "1.0.1"
 description = "An implementation of lxml.xmlfile for the standard library"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -498,7 +497,7 @@ text-unidecode = "1.3"
 name = "feedparser"
 version = "6.0.1"
 description = "Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -536,7 +535,7 @@ tornado = ["tornado (>=0.2)"]
 name = "html5lib"
 version = "1.1"
 description = "HTML parser based on the WHATWG HTML specification"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -583,7 +582,7 @@ colors = ["colorama (>=0.4.3,<0.5.0)"]
 name = "itypes"
 version = "1.2.0"
 description = "Simple immutable types for python."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -591,7 +590,7 @@ python-versions = "*"
 name = "jdcal"
 version = "1.4.1"
 description = "Julian dates from proleptic Gregorian and Julian calendars."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -599,7 +598,7 @@ python-versions = "*"
 name = "jinja2"
 version = "2.11.2"
 description = "A very fast and expressive template engine."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -613,7 +612,7 @@ i18n = ["Babel (>=0.8)"]
 name = "l18n"
 version = "2018.5"
 description = "Internationalization for pytz timezones and territories"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -625,7 +624,7 @@ six = "*"
 name = "markdown"
 version = "3.3.2"
 description = "Python implementation of Markdown."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -636,7 +635,7 @@ testing = ["coverage", "pyyaml"]
 name = "markupsafe"
 version = "1.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
 
@@ -673,7 +672,7 @@ signedtoken = ["cryptography", "pyjwt (>=1.0.0)"]
 name = "openpyxl"
 version = "3.0.5"
 description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6,"
 
@@ -705,7 +704,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "pilkit"
 version = "2.0"
 description = "A collection of utilities and processors for the Python Imaging Libary."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -713,7 +712,7 @@ python-versions = "*"
 name = "pillow"
 version = "7.2.0"
 description = "Python Imaging Library (Fork)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -721,7 +720,7 @@ python-versions = ">=3.5"
 name = "plotly"
 version = "4.12.0"
 description = "An open-source, interactive data visualization library for Python"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -843,7 +842,7 @@ six = ">=1.5"
 name = "python-slugify"
 version = "4.0.1"
 description = "A Python Slugify application that handles Unicode"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -921,7 +920,7 @@ rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 name = "retrying"
 version = "1.3.3"
 description = "Retrying"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -932,7 +931,7 @@ six = ">=1.7.0"
 name = "sgmllib3k"
 version = "1.0.0"
 description = "Py3k port of sgmllib."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -948,7 +947,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "soupsieve"
 version = "2.0.1"
 description = "A modern CSS selector implementation for Beautiful Soup."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -964,7 +963,7 @@ python-versions = ">=3.5"
 name = "tablib"
 version = "2.0.0"
 description = "Format agnostic tabular data library (XLS, JSON, YAML, CSV)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -987,7 +986,7 @@ yaml = ["pyyaml"]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1019,7 +1018,7 @@ python-versions = "*"
 name = "unidecode"
 version = "1.1.1"
 description = "ASCII transliterations of Unicode text"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1027,7 +1026,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "uritemplate"
 version = "3.0.1"
 description = "URI templates"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1048,7 +1047,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 name = "wagtail"
 version = "2.10.2"
 description = "A Django content management system."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1078,7 +1077,7 @@ testing = ["python-dateutil (>=2.2)", "pytz (>=2014.7)", "elasticsearch (>=1.0.0
 name = "wagtail-srcset"
 version = "0.1.5"
 description = ""
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6,<4.0"
 
@@ -1089,7 +1088,7 @@ wagtail = ">=2.8,<3.0"
 name = "webencodings"
 version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1108,7 +1107,7 @@ brotli = ["brotli"]
 name = "willow"
 version = "1.4"
 description = "A Python image library that sits on top of Pillow, Wand and OpenCV"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1116,7 +1115,7 @@ python-versions = "*"
 name = "xlrd"
 version = "1.2.0"
 description = "Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1124,7 +1123,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "xlsxwriter"
 version = "1.3.7"
 description = "A Python module for creating Excel XLSX files."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1132,14 +1131,14 @@ python-versions = "*"
 name = "xlwt"
 version = "1.3.0"
 description = "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "6853f175e0b193e55be7c67ef5a5913575dd41ff75f8dd358d15658aab077686"
+content-hash = "f467b26946a6136f646276c97d54bf199072f9e41468ea3e731e6e80f85619cf"
 
 [metadata.files]
 appdirs = [
