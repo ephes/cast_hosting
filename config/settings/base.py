@@ -42,7 +42,6 @@ ALLOWED_HOSTS = []
 DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
-    "django.contrib.sites",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -97,7 +96,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.contrib.sites.middleware.CurrentSiteMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
@@ -173,7 +171,7 @@ MEDIA_URL = "/media/"
 
 # ADMIN
 # Django Admin URL.
-ADMIN_URL = "admin/"
+ADMIN_URL = "hidden_admin/"
 
 
 # AUTHENTICATION
@@ -188,11 +186,6 @@ AUTH_USER_MODEL = "users.User"
 LOGIN_REDIRECT_URL = "users:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
-
-
-# SITES
-# but site id middleware does not work when SITE_ID is set :/
-# SITE_ID = 1  # Django Admin wont work without this
 
 
 # Comments
