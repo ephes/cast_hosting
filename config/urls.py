@@ -11,7 +11,6 @@ from wagtail.documents import urls as wagtaildocs_urls
 from apps.views import test_site
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path("site/", test_site, name="test-site"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
