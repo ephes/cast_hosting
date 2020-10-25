@@ -196,3 +196,7 @@ FLUENT_COMMENTS_EXCLUDE_FIELDS = ("url", "title")
 
 # Wagtail
 WAGTAIL_SITE_NAME = "Cast Hosting"
+
+
+# Django Sites
+SITE_ID = 1  # we use wagtail sites
