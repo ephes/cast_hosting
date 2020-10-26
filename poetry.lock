@@ -43,7 +43,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 name = "beautifulsoup4"
 version = "4.8.2"
 description = "Screen-scraping library"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -112,7 +112,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "coreapi"
 version = "2.3.3"
 description = "Python client library for Core API."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -126,7 +126,7 @@ uritemplate = "*"
 name = "coreschema"
 version = "0.0.4"
 description = "Core Schema."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -190,7 +190,7 @@ requests-oauthlib = ">=0.3.0"
 name = "django-appconf"
 version = "1.0.4"
 description = "A helper class for handling configuration defaults of packaged apps gracefully."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -199,9 +199,9 @@ django = "*"
 
 [[package]]
 name = "django-cast"
-version = "0.1.34"
+version = "0.1.35"
 description = "Just another blogging / podcasting package"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "^3.9"
 develop = false
@@ -231,13 +231,13 @@ wagtail_srcset = "^0.1"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "9fea455ddfb1d861ff0764c98052f635c35d3256"
+resolved_reference = "47403d7fd1030267e48dc16eae54a8795aab904a"
 
 [[package]]
 name = "django-ckeditor"
 version = "6.0.0"
 description = "Django admin CKEditor integration."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -269,14 +269,6 @@ coverage = "*"
 six = ">=1.4.0"
 
 [[package]]
-name = "django-crispy-forms"
-version = "1.9.2"
-description = "Best way to have Django DRY forms"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[[package]]
 name = "django-environ"
 version = "0.4.5"
 description = "Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application."
@@ -296,7 +288,7 @@ python-versions = ">=3.5"
 name = "django-filepond"
 version = "0.1.2"
 description = "Django support for the fjavascript file upload library filepond"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -304,7 +296,7 @@ python-versions = "*"
 name = "django-filter"
 version = "2.4.0"
 description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -312,34 +304,10 @@ python-versions = ">=3.5"
 Django = ">=2.2"
 
 [[package]]
-name = "django-fluent-comments"
-version = "2.1"
-description = "A modern, ajax-based appearance for django_comments"
-category = "main"
-optional = false
-python-versions = "*"
-develop = false
-
-[package.dependencies]
-django-contrib-comments = ">=1.9"
-django-crispy-forms = ">=1.7.1"
-django-tag-parser = ">=3.1"
-python-akismet = ">=0.4.1"
-
-[package.extras]
-threadedcomments = ["django-threadedcomments (>=1.2)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/ephes/django-fluent-comments"
-reference = "master"
-resolved_reference = "109b9896cdc1c32b149a27e7ed254aef09c1b07e"
-
-[[package]]
 name = "django-imagekit"
 version = "4.0.2"
 description = "Automated image processing for Django models."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -356,7 +324,7 @@ async_rq = ["django-rq (>=0.6.0)"]
 name = "django-js-asset"
 version = "1.2.2"
 description = "script tag with additional attributes for django.forms.Media"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -364,7 +332,7 @@ python-versions = "*"
 name = "django-model-utils"
 version = "4.0.0"
 description = "Django model mixins and utilities"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -375,7 +343,7 @@ Django = ">=2.0.1"
 name = "django-modelcluster"
 version = "5.1"
 description = "Django extension to allow working with 'clusters' of models as a single unit, independently of the database"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -386,18 +354,10 @@ pytz = ">=2015.2"
 taggit = ["django-taggit (>=0.20)"]
 
 [[package]]
-name = "django-tag-parser"
-version = "3.2"
-description = "Micro-library to easily write custom Django template tags"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "django-taggit"
 version = "1.3.0"
 description = "django-taggit is a reusable Django application for simple tagging."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -408,7 +368,7 @@ Django = ">=1.11"
 name = "django-threadedcomments"
 version = "1.2"
 description = "A simple yet flexible threaded commenting system."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -419,7 +379,7 @@ django-contrib-comments = ">=1.7.3"
 name = "django-treebeard"
 version = "4.3.1"
 description = "Efficient tree implementations for Django"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -430,7 +390,7 @@ Django = ">=1.8"
 name = "django-watson"
 version = "1.5.5"
 description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -438,7 +398,7 @@ python-versions = "*"
 name = "djangorestframework"
 version = "3.12.1"
 description = "Web APIs for Django, made easy."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -449,7 +409,7 @@ django = ">=2.2"
 name = "draftjs-exporter"
 version = "2.1.7"
 description = "Library to convert rich text from Draft.js raw ContentState to HTML"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -462,7 +422,7 @@ testing = ["tox (>=2.3.1)", "markov_draftjs (==0.1.1)", "memory-profiler (==0.47
 name = "et-xmlfile"
 version = "1.0.1"
 description = "An implementation of lxml.xmlfile for the standard library"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -495,9 +455,9 @@ text-unidecode = "1.3"
 
 [[package]]
 name = "feedparser"
-version = "6.0.1"
+version = "6.0.2"
 description = "Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -535,7 +495,7 @@ tornado = ["tornado (>=0.2)"]
 name = "html5lib"
 version = "1.1"
 description = "HTML parser based on the WHATWG HTML specification"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -582,7 +542,7 @@ colors = ["colorama (>=0.4.3,<0.5.0)"]
 name = "itypes"
 version = "1.2.0"
 description = "Simple immutable types for python."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -590,7 +550,7 @@ python-versions = "*"
 name = "jdcal"
 version = "1.4.1"
 description = "Julian dates from proleptic Gregorian and Julian calendars."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -598,7 +558,7 @@ python-versions = "*"
 name = "jinja2"
 version = "2.11.2"
 description = "A very fast and expressive template engine."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -612,7 +572,7 @@ i18n = ["Babel (>=0.8)"]
 name = "l18n"
 version = "2018.5"
 description = "Internationalization for pytz timezones and territories"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -622,9 +582,9 @@ six = "*"
 
 [[package]]
 name = "markdown"
-version = "3.3.2"
+version = "3.3.3"
 description = "Python implementation of Markdown."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -635,7 +595,7 @@ testing = ["coverage", "pyyaml"]
 name = "markupsafe"
 version = "1.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
 
@@ -672,7 +632,7 @@ signedtoken = ["cryptography", "pyjwt (>=1.0.0)"]
 name = "openpyxl"
 version = "3.0.5"
 description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6,"
 
@@ -704,7 +664,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "pilkit"
 version = "2.0"
 description = "A collection of utilities and processors for the Python Imaging Libary."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -712,7 +672,7 @@ python-versions = "*"
 name = "pillow"
 version = "7.2.0"
 description = "Python Imaging Library (Fork)"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -720,7 +680,7 @@ python-versions = ">=3.5"
 name = "plotly"
 version = "4.12.0"
 description = "An open-source, interactive data visualization library for Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -817,17 +777,6 @@ docs = ["sphinx", "sphinx-rtd-theme"]
 testing = ["django", "django-configurations (>=2.0)", "six"]
 
 [[package]]
-name = "python-akismet"
-version = "0.4.2"
-description = "Akismet v1.1 module for Python.\n"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-requests = "*"
-
-[[package]]
 name = "python-dateutil"
 version = "2.8.1"
 description = "Extensions to the standard Python datetime module"
@@ -842,7 +791,7 @@ six = ">=1.5"
 name = "python-slugify"
 version = "4.0.1"
 description = "A Python Slugify application that handles Unicode"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -920,7 +869,7 @@ rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 name = "retrying"
 version = "1.3.3"
 description = "Retrying"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -931,7 +880,7 @@ six = ">=1.7.0"
 name = "sgmllib3k"
 version = "1.0.0"
 description = "Py3k port of sgmllib."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -947,7 +896,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "soupsieve"
 version = "2.0.1"
 description = "A modern CSS selector implementation for Beautiful Soup."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -963,7 +912,7 @@ python-versions = ">=3.5"
 name = "tablib"
 version = "2.0.0"
 description = "Format agnostic tabular data library (XLS, JSON, YAML, CSV)"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -986,7 +935,7 @@ yaml = ["pyyaml"]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1018,7 +967,7 @@ python-versions = "*"
 name = "unidecode"
 version = "1.1.1"
 description = "ASCII transliterations of Unicode text"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1026,7 +975,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "uritemplate"
 version = "3.0.1"
 description = "URI templates"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1047,7 +996,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 name = "wagtail"
 version = "2.10.2"
 description = "A Django content management system."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1077,7 +1026,7 @@ testing = ["python-dateutil (>=2.2)", "pytz (>=2014.7)", "elasticsearch (>=1.0.0
 name = "wagtail-srcset"
 version = "0.1.5"
 description = ""
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
 
@@ -1088,7 +1037,7 @@ wagtail = ">=2.8,<3.0"
 name = "webencodings"
 version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1107,7 +1056,7 @@ brotli = ["brotli"]
 name = "willow"
 version = "1.4"
 description = "A Python image library that sits on top of Pillow, Wand and OpenCV"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1115,7 +1064,7 @@ python-versions = "*"
 name = "xlrd"
 version = "1.2.0"
 description = "Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1123,7 +1072,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "xlsxwriter"
 version = "1.3.7"
 description = "A Python module for creating Excel XLSX files."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -1131,14 +1080,14 @@ python-versions = "*"
 name = "xlwt"
 version = "1.3.0"
 description = "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f467b26946a6136f646276c97d54bf199072f9e41468ea3e731e6e80f85619cf"
+content-hash = "6853f175e0b193e55be7c67ef5a5913575dd41ff75f8dd358d15658aab077686"
 
 [metadata.files]
 appdirs = [
@@ -1252,10 +1201,6 @@ django-contrib-comments = [
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
 ]
-django-crispy-forms = [
-    {file = "django-crispy-forms-1.9.2.tar.gz", hash = "sha256:f2f1e0fbb458851636447cfb6be1a611b40c8ac9e41a74ba923011378670b43b"},
-    {file = "django_crispy_forms-1.9.2-py3-none-any.whl", hash = "sha256:888bb316db89b60050a42ec35080facb361d823eec38010ccb0702f45642d3b8"},
-]
 django-environ = [
     {file = "django-environ-0.4.5.tar.gz", hash = "sha256:6c9d87660142608f63ec7d5ce5564c49b603ea8ff25da595fd6098f6dc82afde"},
     {file = "django_environ-0.4.5-py2.py3-none-any.whl", hash = "sha256:c57b3c11ec1f319d9474e3e5a79134f40174b17c7cc024bbb2fad84646b120c4"},
@@ -1272,7 +1217,6 @@ django-filter = [
     {file = "django-filter-2.4.0.tar.gz", hash = "sha256:84e9d5bb93f237e451db814ed422a3a625751cbc9968b484ecc74964a8696b06"},
     {file = "django_filter-2.4.0-py3-none-any.whl", hash = "sha256:e00d32cebdb3d54273c48f4f878f898dced8d5dfaad009438fe61ebdf535ace1"},
 ]
-django-fluent-comments = []
 django-imagekit = [
     {file = "django-imagekit-4.0.2.tar.gz", hash = "sha256:6ec0afb77cdf52cd453c9fc2c10ef350d111edfd6ce53c5977aa8a0e22cee00c"},
     {file = "django_imagekit-4.0.2-py2.py3-none-any.whl", hash = "sha256:304c3379f6a5cac387e47ace11195a603ad3cb01e3e951b45489824d25b00359"},
@@ -1288,10 +1232,6 @@ django-model-utils = [
 django-modelcluster = [
     {file = "django-modelcluster-5.1.tar.gz", hash = "sha256:783d177f7bf5c8f30fe365c347b9a032920de371fe1c63d955d7b283684d4c08"},
     {file = "django_modelcluster-5.1-py2.py3-none-any.whl", hash = "sha256:d4a0f90e85ae1a193f417e149b6b01d0b2a867dcf97f7fae1d34a4363a9d7baa"},
-]
-django-tag-parser = [
-    {file = "django-tag-parser-3.2.tar.gz", hash = "sha256:903cd4bf3692c8c060770ca2b9d6e74e4ee52d6078308852acffe1ef4a49e0f7"},
-    {file = "django_tag_parser-3.2-py2.py3-none-any.whl", hash = "sha256:92e5da35d8774a6ab4e0ac0b3b2229b8a0b78a61c5a3b0fd159255f0a66c08d7"},
 ]
 django-taggit = [
     {file = "django-taggit-1.3.0.tar.gz", hash = "sha256:4a833bf71f4c2deddd9745924eee53be1c075d7f0020a06f12e29fa3d752732d"},
@@ -1326,8 +1266,8 @@ faker = [
     {file = "Faker-4.14.0.tar.gz", hash = "sha256:30afa8f564350770373f299d2d267bff42aaba699a7ae0a3b6f378b2a8170569"},
 ]
 feedparser = [
-    {file = "feedparser-6.0.1-py2.py3-none-any.whl", hash = "sha256:c9b436334258e718e224c5ef8a78088557e0d0382506360f702de10667ffde32"},
-    {file = "feedparser-6.0.1.tar.gz", hash = "sha256:6ca88edcaa43f428345968df903a87f020843eda5e28d7ea24a612158d61e74c"},
+    {file = "feedparser-6.0.2-py3-none-any.whl", hash = "sha256:f596c4b34fb3e2dc7e6ac3a8191603841e8d5d267210064e94d4238737452ddd"},
+    {file = "feedparser-6.0.2.tar.gz", hash = "sha256:1b00a105425f492f3954fd346e5b524ca9cef3a4bbf95b8809470e9857aa1074"},
 ]
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
@@ -1369,8 +1309,8 @@ l18n = [
     {file = "l18n-2018.5.tar.gz", hash = "sha256:46e72c980d06a7511726f1da10a32fa524f7e2937c0af5ad52d39577024a4382"},
 ]
 markdown = [
-    {file = "Markdown-3.3.2-py3-none-any.whl", hash = "sha256:77b7bff443b1f97b4814fa438c181fd5882e31edb01b422856b3feca91475f3e"},
-    {file = "Markdown-3.3.2.tar.gz", hash = "sha256:4b71fbd2db30c1dfb400f22b25f41cb823fc1db0aa8b7b67d120644f92cc1011"},
+    {file = "Markdown-3.3.3-py3-none-any.whl", hash = "sha256:c109c15b7dc20a9ac454c9e6025927d44460b85bd039da028d85e2b6d0bcc328"},
+    {file = "Markdown-3.3.3.tar.gz", hash = "sha256:5d9f2b5ca24bc4c7a390d22323ca4bad200368612b5aaa7796babf971d2b2f18"},
 ]
 markupsafe = [
     {file = "MarkupSafe-1.1.1-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:09027a7803a62ca78792ad89403b1b7a73a01c8cb65909cd876f7fcebd79b161"},
@@ -1508,9 +1448,6 @@ pytest = [
 pytest-django = [
     {file = "pytest-django-3.10.0.tar.gz", hash = "sha256:4de6dbd077ed8606616958f77655fed0d5e3ee45159475671c7fa67596c6dba6"},
     {file = "pytest_django-3.10.0-py2.py3-none-any.whl", hash = "sha256:c33e3d3da14d8409b125d825d4e74da17bb252191bf6fc3da6856e27a8b73ea4"},
-]
-python-akismet = [
-    {file = "python-akismet-0.4.2.tar.gz", hash = "sha256:874a4a8c2e9f2463aae0de315bcfb61cf653fd94effb8afc3a19eb17e9105a7c"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
