@@ -211,6 +211,7 @@ coreapi = "^2.3.3"
 django = "^3.1"
 django-allauth = "^0.42"
 django-ckeditor = "^6"
+django-crispy-forms = "*"
 django-environ = "^0.4.5"
 django-filepond = "^0.1.2"
 django-filter = "^2.2.0"
@@ -231,7 +232,7 @@ wagtail_srcset = "^0.1"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "47403d7fd1030267e48dc16eae54a8795aab904a"
+resolved_reference = "438313ae3b910df23452c1a475258d229486771f"
 
 [[package]]
 name = "django-ckeditor"
@@ -267,6 +268,14 @@ python-versions = "*"
 [package.dependencies]
 coverage = "*"
 six = ">=1.4.0"
+
+[[package]]
+name = "django-crispy-forms"
+version = "1.9.2"
+description = "Best way to have Django DRY forms"
+category = "main"
+optional = false
+python-versions = ">=3.5"
 
 [[package]]
 name = "django-environ"
@@ -1200,6 +1209,10 @@ django-contrib-comments = [
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
+]
+django-crispy-forms = [
+    {file = "django-crispy-forms-1.9.2.tar.gz", hash = "sha256:f2f1e0fbb458851636447cfb6be1a611b40c8ac9e41a74ba923011378670b43b"},
+    {file = "django_crispy_forms-1.9.2-py3-none-any.whl", hash = "sha256:888bb316db89b60050a42ec35080facb361d823eec38010ccb0702f45642d3b8"},
 ]
 django-environ = [
     {file = "django-environ-0.4.5.tar.gz", hash = "sha256:6c9d87660142608f63ec7d5ce5564c49b603ea8ff25da595fd6098f6dc82afde"},
