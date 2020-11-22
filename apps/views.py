@@ -7,4 +7,4 @@ def test_site(request):
 
 
 def hello(request):
-    return HttpResponse("Hello World!")
+    return HttpResponse("Hello asdf World!")
