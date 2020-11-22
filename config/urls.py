@@ -8,10 +8,12 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
+from apps.views import hello
 from apps.views import test_site
 
 urlpatterns = [
     path("site/", test_site, name="test-site"),
+    path("hello/", hello, name="hello"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
