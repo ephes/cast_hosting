@@ -2,8 +2,9 @@ name: Deploy on Push
 on: [push]
 jobs:
   deployment:
-    - name: Deploy Stage
-      uses: fjogeleit/http-request-action@master
-      with:
-        url: 'https://3b74fc2e9bc9.ngrok.io/deploy'
-        method: 'POST'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fjogeleit/http-request-action@master
+        with:
+          url: 'https://3b74fc2e9bc9.ngrok.io/deploy'
+          method: 'POST'
