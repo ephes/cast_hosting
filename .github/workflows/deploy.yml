@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: fjogeleit/http-request-action@master
         with:
-          url: 'https://3b74fc2e9bc9.ngrok.io/deploy'
+          url: 'https://2c1d1280af9c.ngrok.io/deploy'
           method: 'POST'
