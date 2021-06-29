@@ -200,3 +200,6 @@ WAGTAIL_SITE_NAME = "Cast Hosting"
 
 # Django Sites
 SITE_ID = 1  # we use wagtail sites
+
+# Default auto primary key field (Django 3.2)
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
