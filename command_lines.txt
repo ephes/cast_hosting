@@ -10,3 +10,5 @@ black .
 
 flake8 && pytest && isort . && black .
 flake8 && coverage run -m pytest && coverage report -m && isort . && black .
+
+set -gx DATABASE_URL sqlite:///db.sqlite3
