@@ -277,7 +277,7 @@ wagtail_srcset = "^0.1"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "d4a4890f0867c6bc3a03cd997383d9d8a75c17ee"
+resolved_reference = "0e1a6763d250448e80de8619066877cb7155b813"
 
 [[package]]
 name = "django-ckeditor"
