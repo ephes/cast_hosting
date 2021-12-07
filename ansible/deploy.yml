@@ -1,10 +1,17 @@
 - hosts: staging
+  vars:
+    - username: cast
+    - home_path: "/home/{{ username }}"
+    - deploy_home: /home/deploy
+    - site_path: "{{ home_path }}/site"
+    - services_path: "/home/deploy/site/services"
+    - global_python: python3.10
+    - ansible_venv_bin: "{{ deploy_home }}/ansible_venv/bin"
+    - ansible_python: "{{ ansible_venv_bin }}/python"
+    - default_path: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   tasks:
+    - name: "Include secret vars"
     - include_vars: secrets.yml
-
-    - name: Install required build packages
-      apt:
-        name: ["git"]
 
     - name: Packages required for Pillow
       apt:
@@ -14,19 +21,19 @@
       apt:
         name: ["gettext"]
 
-    - name: Add the user "cast" with a bash shell
+    - name: Add the unix user with a bash shell
       user:
-        name: cast
+        name: "{{ username }}"
         shell: /bin/bash
 
-    - name: Create a new postgres database with name "{{ cast_postgres_database }}"
+    - name: Create a new postgres database
       community.general.postgresql_db:
         name: "{{ cast_postgres_database }}"
         state: present
       become: true
       become_user: postgres
 
-    - name: Create a new postgres user with name "{{ cast_postgres_user }}"
+    - name: Create a new postgres user
       community.general.postgresql_user:
         db: "{{ cast_postgres_database }}"
         name: "{{ cast_postgres_user }}"
@@ -38,74 +45,74 @@
     - name: Git checkout repository
       git:
         repo: "https://github.com/ephes/cast_hosting"
-        dest: /home/cast/site
+        dest: "{{ site_path }}"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Create .env file
       template:
         src: env.template.j2
-        dest: /home/cast/site/.env
-        mode: '0600'
+        dest: "{{ site_path }}/.env"
+        mode: "0600"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Install poetry
-      shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | /usr/local/bin/python3.10 -
+      shell: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3.10 -
       args:
         warn: no
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Install poetry dependencies
-      shell: /home/cast/.local/bin/poetry install
+      shell: "{{ site_path }}/.local/bin/poetry install"
       args:
-        chdir: /home/cast/site
+        chdir: "{{ site_path }}"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Find path to poetry venv interpreter
-      shell: find /home/cast/.cache/pypoetry/virtualenvs -name python | grep bin
+      shell: find "{{ home_path }}.cache/pypoetry/virtualenvs -name python | grep bin"
       register: find_python
 
-    - set_fact:
+    - name: Set python bin path
+      set_fact:
         python_bin_path={{ find_python.stdout }}
 
     - name: Upgrade pip
       shell: "{{ python_bin_path }} -m pip install --upgrade pip"
       args:
-        chdir: /home/cast/site
+        chdir: "{{ site_path }}"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Run django migrations
       shell: "{{ python_bin_path }} manage.py migrate"
       args:
-        chdir: /home/cast/site
+        chdir: "{{ site_path }}"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
     - name: Run django collectstatic
       shell: "{{ python_bin_path }} manage.py collectstatic --noinput"
       args:
-        chdir: /home/cast/site
+        chdir: "{{ site_path }}"
       become: true
-      become_user: cast
+      become_user: "{{ username }}"
 
-    # Gunicorn
     - name: Create a symbolic link for gunicorn systemd service
       file:
-        src: /home/cast/site/cast.service
+        src: "{{ site_path }}/cast.service"
         dest: /etc/systemd/system/cast.service
         state: link
 
     - name: Make sure cast gunicorn service is running
       systemd:
         state: restarted
-        name: cast
+        name: "{{ username }}"
 
     - name: Create a symbolic link for django_cast traefik loadbalancer
       file:
-        src: /home/cast/site/django_cast.traefik.yml
+        src: "{{ site_path }}/django_cast.traefik.yml"
         dest: /etc/traefik/dynamic/django_cast.traefik.yml
         state: link
