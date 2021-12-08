@@ -11,7 +11,7 @@
     - default_path: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   tasks:
     - name: "Include secret vars"
-    - include_vars: secrets.yml
+      include_vars: secrets.yml
 
     - name: Packages required for Pillow
       apt:
@@ -27,6 +27,8 @@
         shell: /bin/bash
 
     - name: Create a new postgres database
+      # install role first:
+      # ansible-galaxy collection install community.postgresql
       community.general.postgresql_db:
         name: "{{ cast_postgres_database }}"
         state: present
@@ -65,14 +67,14 @@
       become_user: "{{ username }}"
 
     - name: Install poetry dependencies
-      shell: "{{ site_path }}/.local/bin/poetry install"
+      shell: "{{ home_path }}/.local/share/pypoetry/venv/bin/poetry install"
       args:
         chdir: "{{ site_path }}"
       become: true
       become_user: "{{ username }}"
 
     - name: Find path to poetry venv interpreter
-      shell: find "{{ home_path }}.cache/pypoetry/virtualenvs -name python | grep bin"
+      shell: "find {{ home_path }}/.cache/pypoetry/virtualenvs -name python | grep bin"
       register: find_python
 
     - name: Set python bin path
