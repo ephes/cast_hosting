@@ -237,33 +237,33 @@ python-versions = "^3.9"
 develop = false
 
 [package.dependencies]
-coreapi = "^2.3"
+coreapi = "*"
 django = "*"
 django-allauth = "*"
 django-contrib-comments = "*"
 django-crispy-forms = "*"
-django-environ = "^0.7"
+django-environ = "*"
 django-filter = "*"
-django-fluent-comments = "^3.0"
-django-model-utils = "^4"
+django-fluent-comments = "*"
+django-model-utils = "*"
 django-tag-parser = "*"
-django-threadedcomments = "^1.2"
-djangorestframework = "^3.12"
-feedparser = "^6"
+django-threadedcomments = "*"
+djangorestframework = "*"
+feedparser = "*"
 l18n = {git = "https://github.com/ephes/l18n", branch = "develop"}
-markdown = "^3.2.1"
-Pillow = "^8"
-plotly = "^5"
+markdown = "*"
+Pillow = "*"
+plotly = "*"
 python-akismet = {git = "https://github.com/Nekmo/python-akismet", branch = "master"}
-python-slugify = "^5"
-wagtail = "^2.14"
-wagtail_srcset = "^0.1"
+python-slugify = "*"
+wagtail = "*"
+wagtail_srcset = "*"
 
 [package.source]
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "1910a963fc0bbb433b5ddff34a1f31e953022310"
+resolved_reference = "b84b3ae413bb351b46528b47628addb9ee6db2da"
 
 [[package]]
 name = "django-contrib-comments"
@@ -298,7 +298,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "django-environ"
-version = "0.7.0"
+version = "0.8.1"
 description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
 category = "main"
 optional = false
@@ -394,14 +394,14 @@ Django = ">=2.2"
 
 [[package]]
 name = "django-threadedcomments"
-version = "1.2"
+version = "2.0"
 description = "A simple yet flexible threaded commenting system."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-django-contrib-comments = ">=1.7.3"
+django-contrib-comments = ">=1.9.0"
 
 [[package]]
 name = "django-treebeard"
@@ -437,7 +437,7 @@ python-versions = "*"
 [package.extras]
 html5lib = ["beautifulsoup4 (>=4.4.1,<5)", "html5lib (>=0.999,<=1.0.1)"]
 lxml = ["lxml (>=4.2.0,<5)"]
-testing = ["tox (>=2.3.1)", "markov-draftjs (==0.1.1)", "memory-profiler (==0.47)", "psutil (==5.4.1)", "coverage (>=4.1.0)", "flake8 (>=3.2.0)", "isort (==4.2.5)", "beautifulsoup4 (>=4.4.1,<5)", "html5lib (>=0.999,<=1.0.1)", "lxml (>=4.2.0,<5)"]
+testing = ["tox (>=2.3.1)", "markov_draftjs (==0.1.1)", "memory-profiler (==0.47)", "psutil (==5.4.1)", "coverage (>=4.1.0)", "flake8 (>=3.2.0)", "isort (==4.2.5)", "beautifulsoup4 (>=4.4.1,<5)", "html5lib (>=0.999,<=1.0.1)", "lxml (>=4.2.0,<5)"]
 
 [[package]]
 name = "et-xmlfile"
@@ -1338,8 +1338,8 @@ django-crispy-forms = [
     {file = "django_crispy_forms-1.13.0-py3-none-any.whl", hash = "sha256:9c49d29dd9e98dc2e6e3a8b02670d72deb6edf7bc616986ca412d72c306b36a0"},
 ]
 django-environ = [
-    {file = "django-environ-0.7.0.tar.gz", hash = "sha256:b99bd3704221f8b717c8517d8146e53fdee509d9e99056be560060003b92213e"},
-    {file = "django_environ-0.7.0-py2.py3-none-any.whl", hash = "sha256:20a5a3570333d3718c0a7ca834290ef850e2b96237ae4ca0a05823b3a0cb3363"},
+    {file = "django-environ-0.8.1.tar.gz", hash = "sha256:6f0bc902b43891656b20486938cba0861dc62892784a44919170719572a534cb"},
+    {file = "django_environ-0.8.1-py2.py3-none-any.whl", hash = "sha256:42593bee519a527602a467c7b682aee1a051c2597f98c45f4f4f44169ecdb6e5"},
 ]
 django-extensions = [
     {file = "django-extensions-3.1.5.tar.gz", hash = "sha256:28e1e1bf49f0e00307ba574d645b0af3564c981a6dfc87209d48cb98f77d0b1a"},
@@ -1370,8 +1370,8 @@ django-taggit = [
     {file = "django_taggit-1.5.1-py3-none-any.whl", hash = "sha256:dfe9e9c10b5929132041de0c00093ef0072c73c2a97d0f74a818ae50fa77149a"},
 ]
 django-threadedcomments = [
-    {file = "django-threadedcomments-1.2.tar.gz", hash = "sha256:24d5c67b6b175c155d0c642e715de70602dbb3f6d9300532cbf954b22888554e"},
-    {file = "django_threadedcomments-1.2-py2.py3-none-any.whl", hash = "sha256:5a313a13ef02ee95f3818ee0b8eff64d58988edff48668de148b3751279c7ea3"},
+    {file = "django-threadedcomments-2.0.tar.gz", hash = "sha256:f8d5bd087a24bde867cf5e3e4a62ca55ac60432fd47ee2ac6f35f350317deec9"},
+    {file = "django_threadedcomments-2.0-py2.py3-none-any.whl", hash = "sha256:5cd81da5c74e6bbaad9f9b450b03b6231278b6da376a1cd8f41eb3f36a934f5c"},
 ]
 django-treebeard = [
     {file = "django-treebeard-4.5.1.tar.gz", hash = "sha256:80150017725239702054e5fa64dc66e383dc13ac262c8d47ee5a82cb005969da"},
@@ -1382,7 +1382,6 @@ djangorestframework = [
     {file = "djangorestframework-3.13.1.tar.gz", hash = "sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee"},
 ]
 draftjs-exporter = [
-    {file = "draftjs_exporter-2.1.7-py3-none-any.whl", hash = "sha256:d415a9964690a2cddb66a31ef32dd46c277e9b80434b94e39e3043188ed83e33"},
     {file = "draftjs_exporter-2.1.7.tar.gz", hash = "sha256:5839cbc29d7bce2fb99837a404ca40c3a07313f2a20e2700de7ad6aa9a9a18fb"},
 ]
 et-xmlfile = [
@@ -1406,6 +1405,7 @@ flake8 = [
     {file = "flake8-4.0.1.tar.gz", hash = "sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d"},
 ]
 gunicorn = [
+    {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 html5lib = [
