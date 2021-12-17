@@ -4,7 +4,13 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      - uses: fjogeleit/http-request-action@master
+      - name: Make Deploy Request
+        id: deployRequest
+        uses: fjogeleit/http-request-action@master
         with:
-          url: 'https://2c1d1280af9c.ngrok.io/deploy'
+          url: 'https://deploy.staging.wersdoerfer.de/deployments/'
           method: 'POST'
+          bearerToken: ${{ secrets.SERVICE_TOKEN }}
+          timeout: 10000
+      - name: Show Deploy Request Response
+        run: echo ${{ steps.deployRequest.outputs.response }}
