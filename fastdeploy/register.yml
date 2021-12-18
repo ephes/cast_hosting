@@ -53,12 +53,6 @@
         owner: "{{ username }}"
         mode: "0644"
 
-    - name: Copy json_cb callback directory
-      ansible.builtin.copy:
-        src: callback_plugins
-        dest: "{{ service_path }}"
-        owner: "{{ username }}"
-
     - name: Copy inventory directory
       ansible.builtin.copy:
         src: inventory
