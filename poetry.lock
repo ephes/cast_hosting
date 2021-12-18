@@ -263,7 +263,7 @@ wagtail_srcset = "*"
 type = "git"
 url = "https://github.com/ephes/django-cast"
 reference = "develop"
-resolved_reference = "b84b3ae413bb351b46528b47628addb9ee6db2da"
+resolved_reference = "f5255b80c7c81d5d3293bbd3a4ee5b4b8d9ddf90"
 
 [[package]]
 name = "django-contrib-comments"
