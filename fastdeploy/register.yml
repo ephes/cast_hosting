@@ -22,7 +22,7 @@
       template:
         src: vault_password.template.j2
         dest: "{{ service_path }}/.vault_password"
-        mode: "0600"
+        mode: "0400"
         owner: "{{ username }}"
 
     - name: Copy secrets
@@ -30,7 +30,7 @@
         src: secrets.yml
         dest: "{{ service_path }}/secrets.yml"
         owner: "{{ username }}"
-        mode: "0644"
+        mode: "0400"
 
     - name: Copy env template
       ansible.builtin.copy:
@@ -51,7 +51,7 @@
         src: config.json
         dest: "{{ service_path }}/config.json"
         owner: "{{ username }}"
-        mode: "0644"
+        mode: "0400"
 
     - name: Copy inventory directory
       ansible.builtin.copy:
@@ -64,7 +64,7 @@
         src: deploy.sh.template.j2
         dest: "{{ service_path }}/deploy.sh"
         owner: "{{ username }}"
-        mode: "0755"
+        mode: "0500"
 
     - name: Create sudoers file for deploy scripts
       template:
