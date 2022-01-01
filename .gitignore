@@ -34,3 +34,6 @@ db.sqlite3
 
 # virtualfish
 .venv
+
+# databases
+/databases/local.db
