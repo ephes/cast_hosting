@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.10"
 gunicorn = "*"
 django-cast = {git = "https://github.com/ephes/django-cast", branch = "develop"}
+whitenoise = "^5.3.0"
 
 [tool.poetry.dev-dependencies]
 black = "*"
